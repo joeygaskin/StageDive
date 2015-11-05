@@ -38,10 +38,12 @@ var Login = React.createClass({
           <Text style={styles.name}>
             StageDive
           </Text>
+          <View>
           <Text style={{
             color: '3effff',
             padding: 5
           }}><Text style={{fontWeight:'bold'}}>Login now</Text> to experience it for yourself!</Text>
+          </View>
           <View style={{
             padding: 10,
             borderWidth: 1,
@@ -92,10 +94,11 @@ var Login = React.createClass({
           </View>
           <TouchableHighlight
           onPress={() => this.signuplink()}
-          underlayColor='transparent'>
+          underlayColor='transparent'
+          >
           <Text style={{
-            color: '3effff',
-            padding: 10
+            color: '#fff',
+            padding: 3
           }}>Don't have an account? <Text style={{fontWeight:'bold'}}>Sign Up</Text></Text>
           </TouchableHighlight>
           </View>
@@ -180,7 +183,7 @@ var styles = StyleSheet.create({
   },
   name: {
     fontSize: 42,
-    color: '#3effff',
+    color: '#fff',
     fontWeight: 'bold',
     backgroundColor: 'transparent',
     alignSelf: 'center',

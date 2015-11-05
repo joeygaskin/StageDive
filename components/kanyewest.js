@@ -26,6 +26,7 @@ var {
       render: function() {
 
         return (
+          
         <View style={styles.container}>
 
           <View style={{marginTop:75, flexDirection: 'row', backgroundColor: '#000'}}>
