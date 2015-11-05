@@ -5,49 +5,40 @@
 'use strict';
 
 var React = require('react-native');
+var Parse = require('parse/react-native');
+var ParseReact = require('parse-react/react-native');
+var Login = require('./components/login');
+
+Parse.initialize("OPfwbvfJPFfTiVBkMS3lFDQk8WSeBTpRZRqZGvzz", "TwVVZeNL5IIzz53kd5N1P6wE6X8VjKyt8vuyKf8Q");
+
+
 var {
   AppRegistry,
   StyleSheet,
-  Text,
-  View,
-} = React;
+  NavigatorIOS
+  } = React;
 
-var StageDive = React.createClass({
-  render: function() {
+var StageDive = React.createClass({render: function() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <NavigatorIOS
+        barTintColor='#1a1919'
+        translucent='true'
+        titleTextColor="#FFFFFF"
+        tintColor="#FFFFFF"
+        style={styles.container}
+        initialRoute={{
+          title: 'StageDive',
+          component: Login
+        }}/>
     );
   }
 });
 
 var styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    flex: 1
+
+  }
 });
 
 AppRegistry.registerComponent('StageDive', () => StageDive);
