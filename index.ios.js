@@ -8,6 +8,8 @@ var React = require('react-native');
 var Parse = require('parse/react-native');
 var ParseReact = require('parse-react/react-native');
 var Login = require('./components/login');
+var Home = require('./components/home');
+var VideoPlayer = require('./components/videoplayer');
 
 Parse.initialize("OPfwbvfJPFfTiVBkMS3lFDQk8WSeBTpRZRqZGvzz", "TwVVZeNL5IIzz53kd5N1P6wE6X8VjKyt8vuyKf8Q");
 
@@ -18,7 +20,10 @@ var {
   NavigatorIOS
   } = React;
 
-var StageDive = React.createClass({render: function() {
+var StageDive = React.createClass({
+
+
+  render: function() {
     return (
       <NavigatorIOS
         barTintColor='#1a1919'
@@ -28,7 +33,7 @@ var StageDive = React.createClass({render: function() {
         style={styles.container}
         initialRoute={{
           title: 'StageDive',
-          component: Login
+          component: VideoPlayer
         }}/>
     );
   }

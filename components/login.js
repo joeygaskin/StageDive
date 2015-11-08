@@ -1,15 +1,20 @@
 'use strict';
 
 var React = require('react-native');
+var Parse = require('parse/react-native');
+var ParseReact = require('parse-react/react-native');
+var Home = require('./home');
 var SignUp = require('./signup');
 var Video = require('react-native-video');
+
 var {
   StyleSheet,
   View,
   TouchableHighlight,
   Text,
   TextInput,
-  Image
+  Image,
+  AlertIOS
   } = React;
 
 var Login = React.createClass({
@@ -19,11 +24,28 @@ var Login = React.createClass({
       component: SignUp
     });
   },
-  getInitialState: function() {
+  goHome() {
+    this.props.navigator.push({
+      title: "Home",
+      component: Home
+    });
+  },
+
+  getInitialState() {
     return {
-      email: '',
-      password: ''
-      }
+      email: "",
+      password: ""
+    };
+  },
+
+  handleSubmit(event) {
+    event.preventDefault();
+
+    let username = this.state.email;
+    let password = this.state.password;
+    this.setState({email: '', password: ''});
+    Parse.User.logIn(username, password).then(this.goHome.bind(this));
+
   },
   render: function() {
     return (
@@ -59,7 +81,11 @@ var Login = React.createClass({
               borderColor: 'transparent',
               color: "#3effff",
               fontWeight: 'bold'
-            }} placeholder='email address' placeholderTextColor="#FFF" onChangeText={(text) => this.setState({text})}/>
+            }} placeholder='email address'
+            placeholderTextColor="#FFF"
+            value={this.state.email}
+            onChangeText={(email) => this.setState({email})}
+            onSubmitEditing={this.handleSubmit}/>
           </View>
           <View style={{
             padding: 10,
@@ -76,7 +102,12 @@ var Login = React.createClass({
               borderColor: 'transparent',
               color: "#3effff",
               fontWeight: 'bold'
-            }} placeholder='Password' placeholderTextColor="#FFF" password={true}/>
+            }} placeholder='Password'
+            placeholderTextColor="#FFF"
+            value={this.state.password}
+            onChangeText={(password) => this.setState({password})}
+            onSubmitEditing={this.handleSubmit}
+            password={true} />
           </View>
 
           <View style={{

@@ -8,6 +8,7 @@ var KanyeWest = require('./kanyewest');
 var TaylorSwift = require('./taylorswift');
 var Video = require('react-native-video');
 
+
 var {
     StyleSheet,
     View,
@@ -94,7 +95,7 @@ var {
       <Video source={{uri: "otrvideo"}}
        rate={1.0}
        volume={1.0}
-       muted={false}
+       muted={true}
        paused={false}
        resizeMode="contain"
        repeat={true}
