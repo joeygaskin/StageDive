@@ -33,7 +33,7 @@ var StageDive = React.createClass({
         style={styles.container}
         initialRoute={{
           title: 'StageDive',
-          component: VideoPlayer
+          component: Login
         }}/>
     );
   }

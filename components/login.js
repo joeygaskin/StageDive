@@ -50,16 +50,15 @@ var Login = React.createClass({
   render: function() {
     return (
       <View style={styles.background}>
-        <Video source={{uri: "moments"}}
+        <Video source={{uri: "ministri"}}
                style={styles.backgroundVideo}
                resizeMode="cover" repeat={true} muted={true}/>
         <View style={styles.backgroundOverlay} />
 
         <View style={styles.contentContainer}>
 
-          <Text style={styles.name}>
-            StageDive
-          </Text>
+          <Image source={{uri: 'stagedive'}} />
+
           <View>
           <Text style={{
             color: '3effff',
@@ -160,8 +159,8 @@ var styles = StyleSheet.create({
     borderRadius: 5,
   },
   backgroundOverlay: {
-    opacity: 0.7,
-    backgroundColor: '#333',
+    opacity: 0.3,
+    backgroundColor: '#ff0000',
     position: 'absolute',
     top: 0,
     left: 0,

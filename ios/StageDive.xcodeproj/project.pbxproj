@@ -26,6 +26,10 @@
 		C93AA3F51BEB1538003220A0 /* otrvideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C93AA3F41BEB1537003220A0 /* otrvideo.mp4 */; };
 		C93AA4061BEB157C003220A0 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C93AA4051BEB1557003220A0 /* libRCTVideo.a */; };
 		C93AA4081BEB2559003220A0 /* moments.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C93AA4071BEB2558003220A0 /* moments.mp4 */; };
+		C9E7C73B1BEF115A008D2CA1 /* ministri.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E7C72F1BEF0FC8008D2CA1 /* ministri.mp4 */; };
+		C9E7C73E1BEF1931008D2CA1 /* stagedive_logo_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C9E7C73C1BEF1931008D2CA1 /* stagedive_logo_2.gif */; };
+		C9E7C73F1BEF1931008D2CA1 /* stagedive_logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = C9E7C73D1BEF1931008D2CA1 /* stagedive_logo.gif */; };
+		C9E7C7411BEF1A52008D2CA1 /* stagedive.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E7C7401BEF1A52008D2CA1 /* stagedive.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +144,10 @@
 		C93AA3F41BEB1537003220A0 /* otrvideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = otrvideo.mp4; path = ../otrvideo.mp4; sourceTree = "<group>"; };
 		C93AA4001BEB1557003220A0 /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVideo.xcodeproj; path = "../node_modules/react-native-video/RCTVideo.xcodeproj"; sourceTree = "<group>"; };
 		C93AA4071BEB2558003220A0 /* moments.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = moments.mp4; path = ../moments.mp4; sourceTree = "<group>"; };
+		C9E7C72F1BEF0FC8008D2CA1 /* ministri.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = ministri.mp4; path = ../ministri.mp4; sourceTree = "<group>"; };
+		C9E7C73C1BEF1931008D2CA1 /* stagedive_logo_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = stagedive_logo_2.gif; path = ../stagedive_logo_2.gif; sourceTree = "<group>"; };
+		C9E7C73D1BEF1931008D2CA1 /* stagedive_logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = stagedive_logo.gif; path = ../stagedive_logo.gif; sourceTree = "<group>"; };
+		C9E7C7401BEF1A52008D2CA1 /* stagedive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stagedive.png; path = ../stagedive.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,7 +312,11 @@
 			isa = PBXGroup;
 			children = (
 				C93AA4071BEB2558003220A0 /* moments.mp4 */,
+				C9E7C72F1BEF0FC8008D2CA1 /* ministri.mp4 */,
 				C93AA3F41BEB1537003220A0 /* otrvideo.mp4 */,
+				C9E7C7401BEF1A52008D2CA1 /* stagedive.png */,
+				C9E7C73C1BEF1931008D2CA1 /* stagedive_logo_2.gif */,
+				C9E7C73D1BEF1931008D2CA1 /* stagedive_logo.gif */,
 				13B07FAE1A68108700A75B9A /* StageDive */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* StageDiveTests */,
@@ -541,9 +553,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E7C73E1BEF1931008D2CA1 /* stagedive_logo_2.gif in Resources */,
 				008F07F31AC5B25A0029DE68 /* main.jsbundle in Resources */,
+				C9E7C73F1BEF1931008D2CA1 /* stagedive_logo.gif in Resources */,
+				C9E7C7411BEF1A52008D2CA1 /* stagedive.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				C9E7C73B1BEF115A008D2CA1 /* ministri.mp4 in Resources */,
 				C93AA3F51BEB1538003220A0 /* otrvideo.mp4 in Resources */,
 				C93AA4081BEB2559003220A0 /* moments.mp4 in Resources */,
 			);
