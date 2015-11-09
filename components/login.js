@@ -6,6 +6,8 @@ var ParseReact = require('parse-react/react-native');
 var Home = require('./home');
 var SignUp = require('./signup');
 var Video = require('react-native-video');
+var Dimensions = require('Dimensions');
+var {width, height} = Dimensions.get('window');
 
 var {
   StyleSheet,
@@ -53,22 +55,23 @@ var Login = React.createClass({
         <Video source={{uri: "ministri"}}
                style={styles.backgroundVideo}
                resizeMode="cover" repeat={true} muted={true}/>
+
         <View style={styles.backgroundOverlay} />
 
         <View style={styles.contentContainer}>
 
-          <Image source={{uri: 'stagedive'}} />
 
-          <View>
+            <Text style={{fontWeight: 'bold', color: 'white', fontSize: 70}}>StageDive</Text>
+
           <Text style={{
             color: '3effff',
             padding: 5
           }}><Text style={{fontWeight:'bold'}}>Login now</Text> to experience it for yourself!</Text>
-          </View>
+
           <View style={{
             padding: 10,
             borderWidth: 1,
-            borderBottomColor: 'gray',
+            borderBottomColor: 'white',
             borderColor: 'transparent'
           }}>
           <Image style={styles.usrImg} source={{uri: 'http://i.imgur.com/iVVVMRX.png'}}/>
@@ -89,7 +92,7 @@ var Login = React.createClass({
           <View style={{
             padding: 10,
             borderWidth: 1,
-            borderBottomColor: 'gray',
+            borderBottomColor: 'white',
             borderColor: 'transparent'
           }}>
             <Image style={styles.passImg} source={{uri: 'http://i.imgur.com/ON58SIG.png'}}/>
@@ -242,7 +245,14 @@ var styles = StyleSheet.create({
     top: 20,
     width: 20,
     height: 20
-  }
+  },
+  logo: {
+    position: 'absolute',
+
+    top: 20,
+    width: 344,
+    height: 71
+  },
 });
 
 module.exports = Login;

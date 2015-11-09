@@ -8,7 +8,7 @@ var {
 } = React;
 
 var deviceWidth = require('Dimensions').get('window').width;
-var precomputeStyle = require('precomputeStyle');
+
 var TAB_UNDERLINE_REF = 'TAB_UNDERLINE';
 
 var styles = StyleSheet.create({
@@ -43,7 +43,7 @@ var CustomTabBar = React.createClass({
 
     return (
       <TouchableOpacity key={name} onPress={() => this.props.goToPage(page)} style={[styles.tab]}>
-        <Text style={{color: isTabActive ? 'navy' : 'black', fontWeight: isTabActive ? 'bold' : 'normal'}}>{name}</Text>
+        <Text style={{color: isTabActive ? '#3effff' : 'red', fontWeight: isTabActive ? 'bold' : 'normal'}}>{name}</Text>
       </TouchableOpacity>
     );
   },

@@ -8,7 +8,8 @@ var {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  ScrollView
 } = React;
 
 
@@ -66,6 +67,7 @@ var VideoPlayer = React.createClass({
 
   render: function() {
     return (
+      <ScrollView>
       <View style={styles.container}>
         <Text>
           <Text style={styles.title}>Current position: </Text>
@@ -81,6 +83,7 @@ var VideoPlayer = React.createClass({
         </View>
 
       </View>
+    </ScrollView>
     );
   }
 });

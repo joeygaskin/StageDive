@@ -1,3 +1,16 @@
+// <Video source={{uri: "otrvideo"}}
+//  rate={1.0}
+//  volume={1.0}
+//  muted={true}
+//  paused={false}
+//  resizeMode="contain"
+//  repeat={true}
+//  onLoadStart={this.loadStart}
+//  onLoad={this.setDuration}
+//  onProgress={this.setTime}
+//  onEnd={this.onEnd}
+//  onError={this.videoError}
+//  style={{width:300, height:200}} />
 'use strict';
 
 var React = require('react-native');
@@ -7,6 +20,7 @@ var {width, height} = Dimensions.get('window');
 var KanyeWest = require('./kanyewest');
 var TaylorSwift = require('./taylorswift');
 var Video = require('react-native-video');
+var JayZandBeyonce = require('./jayzbeyonce');
 
 
 var {
@@ -33,14 +47,20 @@ var {
           component: TaylorSwift
         });
       },
+      jayzBeyonce: function() {
+        this.props.navigator.push({
+          title: 'JAY-Z & Beyonce : On The Run Tour',
+          component: JayZandBeyonce
+        });
+      },
       render: function() {
 
         return (
         <View style={styles.container}>
-        <View style={styles.navigation}>
-          <Text style={{color: '#fff'}}></Text>
-        </View>
         <Carousel delay={7000} style={{width: width, height: 250, borderWidth: 1, borderBottomColor: '#3effff', borderTopColor: '#333'}}>
+          <TouchableHighlight
+          onPress={() => this.jayzBeyonce()}
+          underlayColor='transparent'>
           <Image source={{uri: 'http://static.parkwoodent.netdna-cdn.com/wp-content/uploads/2014/04/OnTheRun_TourHero.jpg'}}
           style={{width: width, height: 250}}>
           <View style={styles.text1}>
@@ -55,6 +75,7 @@ var {
           fontWeight: 'bold',
           fontSize: 28}}>ON THE RUN TOUR</Text></View>
           </Image>
+          </TouchableHighlight>
           <TouchableHighlight
           onPress={() => this.kanyeWest()}
           underlayColor='transparent'>
@@ -92,19 +113,6 @@ var {
           </Image>
         </TouchableHighlight>
         </Carousel>
-      <Video source={{uri: "otrvideo"}}
-       rate={1.0}
-       volume={1.0}
-       muted={true}
-       paused={false}
-       resizeMode="contain"
-       repeat={true}
-       onLoadStart={this.loadStart}
-       onLoad={this.setDuration}
-       onProgress={this.setTime}
-       onEnd={this.onEnd}
-       onError={this.videoError}
-       style={{width:300, height:200}} />
         <View style={styles.moreshows}>
         </View>
         </View>
@@ -123,9 +131,9 @@ var {
     },
     navigation: {
       backgroundColor: '#000',
-      height:50,
+
       width: 800,
-      marginTop: 14
+      marginTop: 0
     },
     text1: {
       position: 'absolute',
