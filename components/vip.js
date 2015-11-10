@@ -11,7 +11,8 @@ var {
   Image,
   ScrollView,
   TouchableHighlight,
-  AlertIOS
+  AlertIOS,
+  TouchableOpacity
 } = React;
 
 
@@ -66,13 +67,43 @@ var VIP = React.createClass({
     );
   },
 
+  getMusicInitialState() {
+    return {
+      rate: 1,
+      volume: 1,
+      muted: false,
+      duration: 0.0,
+      currentTime: 0.0,
+    }
+  },
+
+  onLoad(data) {
+    this.setState({duration: data.duration});
+  },
+
+  onProgress(data) {
+    this.setState({currentTime: data.currentTime});
+  },
+
+  getCurrentTimePercentage() {
+    if (this.state.currentTime > 0) {
+      return parseFloat(this.state.currentTime) / parseFloat(this.state.duration);
+    } else {
+      return 0;
+    }
+  },
 
 
 
   render: function() {
     return (
       <ScrollView>
-      <TouchableHighlight >
+      <TouchableOpacity onPress={() => {this.setState({paused: !this.state.paused})}}>
+      {this.state.unlockedPasses.map(function(pass){
+        return <Video source={{uri: pass.get('media').url()}} paused={true} />;
+      })}
+
+
           <View>
               <View style={styles.cellContainer}>
               {this.state.unlockedPasses.map(function(pass){
@@ -90,8 +121,9 @@ var VIP = React.createClass({
                   </View>
               </View>
               <View style={styles.separator} />
+
           </View>
-      </TouchableHighlight>
+</TouchableOpacity>
     </ScrollView>
     );
   }

@@ -91,7 +91,7 @@ var {
         <View style={{borderWidth: 1, borderTopColor: '#222'}}>
         <Image style={{width: width, height: 300, backgroundColor: '#000'}}
         source={{uri: 'http://static1.squarespace.com/static/54245dc1e4b0cee499909324/54329343e4b00d226ec86d54/54579adee4b07aecc2890781/1415371745268/?format=1500w'}}>
-        <Image style={{ position: 'absolute', top: 80, left: 30, width: 125, height: 125, borderWidth: 1, borderColor: '#3effff'}}
+        <Image style={{ position: 'absolute', top: 80, left: 30, width: 125, height: 125, borderWidth: 1, borderColor: '#ccc'}}
         source={{uri: 'https://pbs.twimg.com/profile_images/505200807503867904/osJXmYRl.jpeg'}}/>
         <View style={styles.text3}>
         <Text style={{
@@ -113,19 +113,17 @@ var {
         </Image>
         </View>
         <View style={{flex: 1, backgroundColor: '#141414', width: width, height: height}}>
-        <View style={{marginBottom: 230}}>
+        <View style={{marginBottom: 250}}>
           <Text style={{paddingTop: 10, marginLeft:30, fontSize:18, fontWeight:'bold', color: '#3effff'}}>The Show</Text>
           <Text style={{paddingTop: 15, paddingRight: 40, paddingLeft: 40, fontSize:12, color: '#fff'}}>
-          <Text style={{fontWeight: 'bold'}}>The Yeezus Tour</Text> was a concert tour by American
-          rapper <Text style={{fontWeight: 'bold'}}>Kanye West.</Text>
-           The venture served as West's first solo concert tour in five years and
-            <Text style={{fontWeight: 'bold'}}>A Tribe Called Quest</Text>,
-            <Text style={{fontWeight: 'bold'}}>Travi$ Scott</Text>, <Text style={{fontWeight: 'bold'}}>Pusha T</Text>,
-             and <Text style={{fontWeight: 'bold'}}>Kendrick Lamar</Text>,
-            served as opening acts on select dates. The tour is in support of West's
-            sixth solo studio album, <Text style={{fontWeight: 'bold'}}>Yeezus</Text>.
+          <Text style={{fontWeight: 'bold'}}>The 1989 World Tour</Text> is the fourth concert tour by American singer-songwriter <Text style={{fontWeight: 'bold'}}>Taylor Swift</Text>,
+           in support of her fifth studio album, 1989. The tour took seven months to plan before three
+            months of music rehearsals, four weeks of stage rehearsals and ten days of two-a-days dress rehearsals. The
+             tour's corporate sponsors are <Text style={{fontWeight: 'bold'}}>American Express</Text>,
+              <Text style={{fontWeight: 'bold'}}>Comcast Cable</Text> under its <Text style={{fontWeight: 'bold'}}>
+                Xfinity</Text> name, and <Text style={{fontWeight: 'bold'}}>Keds</Text>.
           </Text>
-          <View style={{position:'absolute', top: 355, marginLeft:140 }}>
+          <View style={{position:'absolute', top: 395, marginLeft:140 }}>
           <Text style={{color:'#333', fontWeight: 'bold', fontSize: 10}}>(click box to play or pause)</Text>
           </View>
         </View>
@@ -163,69 +161,69 @@ var {
               </View>
             </View>
 
-        <View><Text style={{marginLeft:30, marginBottom: 10, fontSize:18, fontWeight:'bold', color: '#3effff'}}>Tour Dates</Text>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
+        <View style={{paddingBottom: 60}}><Text style={{marginLeft:30, marginBottom: 10, fontSize:18, fontWeight:'bold', color: '#3effff'}}>Tour Dates</Text>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
           <Text style={{paddingRight:70, paddingBottom:5, paddingTop:5, color: '#3effff', fontWeight: 'bold', fontSize: 12}}>Date</Text>
           <Text style={{paddingRight:30, paddingLeft:30, paddingBottom:5, paddingTop:5, color: '#3effff', fontWeight: 'bold', fontSize: 12}}>Location</Text>
-          <Text style={{paddingRight:30, paddingLeft:13, paddingBottom:5, paddingTop:5, color: '#3effff', fontWeight: 'bold', fontSize: 12}}>Tickets</Text>
+          <Text style={{paddingRight:30, paddingLeft:30, paddingBottom:5, paddingTop:5, color: '#3effff', fontWeight: 'bold', fontSize: 12}}>Tickets</Text>
         </View>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
           <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 19, 2013</Text>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
+          <Text style={{paddingRight:50, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
           <TouchableHighlight style={{backgroundColor: '#3effff', borderColor:'#3effff', borderWidth: 1, borderRadius: 2, underlayColor:'transparent'}}>
           <Text style={{fontWeight:'bold', color: '#000', fontSize: 12, padding: 2}}>Buy Ticket</Text></TouchableHighlight>
         </View>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 19, 2013</Text>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
+          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 22, 2013</Text>
+          <Text style={{paddingRight:39, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>San Jose, CA</Text>
           <TouchableHighlight style={{backgroundColor: '#3effff', borderColor:'#3effff', borderWidth: 1, borderRadius: 2, underlayColor:'transparent'}}>
           <Text style={{fontWeight:'bold', color: '#000', fontSize: 12, padding: 2}}>Buy Ticket</Text></TouchableHighlight>
         </View>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 19, 2013</Text>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
+          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 23, 2013</Text>
+          <Text style={{paddingRight:44, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Oakland, CA</Text>
           <TouchableHighlight style={{backgroundColor: '#3effff', borderColor:'#3effff', borderWidth: 1, borderRadius: 2, underlayColor:'transparent'}}>
           <Text style={{fontWeight:'bold', color: '#000', fontSize: 12, padding: 2}}>Buy Ticket</Text></TouchableHighlight>
         </View>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 19, 2013</Text>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
+          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 25, 2013</Text>
+          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Las Vegas, WA</Text>
           <TouchableHighlight style={{backgroundColor: '#3effff', borderColor:'#3effff', borderWidth: 1, borderRadius: 2, underlayColor:'transparent'}}>
           <Text style={{fontWeight:'bold', color: '#000', fontSize: 12, padding: 2}}>Buy Ticket</Text></TouchableHighlight>
         </View>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 19, 2013</Text>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
+          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 26, 2013</Text>
+          <Text style={{paddingRight:22, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Los Angeles, CA</Text>
           <TouchableHighlight style={{backgroundColor: '#3effff', borderColor:'#3effff', borderWidth: 1, borderRadius: 2, underlayColor:'transparent'}}>
           <Text style={{fontWeight:'bold', color: '#000', fontSize: 12, padding: 2}}>Buy Ticket</Text></TouchableHighlight>
         </View>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 19, 2013</Text>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
+          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 28, 2013</Text>
+          <Text style={{paddingRight:22, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Los Angeles, CA</Text>
           <TouchableHighlight style={{backgroundColor: '#3effff', borderColor:'#3effff', borderWidth: 1, borderRadius: 2, underlayColor:'transparent'}}>
           <Text style={{fontWeight:'bold', color: '#000', fontSize: 12, padding: 2}}>Buy Ticket</Text></TouchableHighlight>
         </View>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 19, 2013</Text>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
+          <Text style={{paddingRight:32, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 31, 2013</Text>
+          <Text style={{paddingRight:32, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Vancouver, BC</Text>
           <TouchableHighlight style={{backgroundColor: '#3effff', borderColor:'#3effff', borderWidth: 1, borderRadius: 2, underlayColor:'transparent'}}>
           <Text style={{fontWeight:'bold', color: '#000', fontSize: 12, padding: 2}}>Buy Ticket</Text></TouchableHighlight>
         </View>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 19, 2013</Text>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
+          <Text style={{paddingRight:26, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>November 5, 2013</Text>
+          <Text style={{paddingRight:20, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Minneapolis, MN</Text>
           <TouchableHighlight style={{backgroundColor: '#3effff', borderColor:'#3effff', borderWidth: 1, borderRadius: 2, underlayColor:'transparent'}}>
           <Text style={{fontWeight:'bold', color: '#000', fontSize: 12, padding: 2}}>Buy Ticket</Text></TouchableHighlight>
         </View>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 19, 2013</Text>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
+          <Text style={{paddingRight:26, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>November 8, 2013</Text>
+          <Text style={{paddingRight:32, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Columbus, OH</Text>
           <TouchableHighlight style={{backgroundColor: '#3effff', borderColor:'#3effff', borderWidth: 1, borderRadius: 2, underlayColor:'transparent'}}>
           <Text style={{fontWeight:'bold', color: '#000', fontSize: 12, padding: 2}}>Buy Ticket</Text></TouchableHighlight>
         </View>
-        <View style={{paddingRight:62, paddingLeft:62,flexDirection: 'row'}}>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>October 19, 2013</Text>
-          <Text style={{paddingRight:30, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Seattle, WA</Text>
+        <View style={{paddingRight:50, paddingLeft:50,flexDirection: 'row'}}>
+          <Text style={{paddingRight:23, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>November 17, 2013</Text>
+          <Text style={{paddingRight:47, paddingBottom:5, paddingTop:5, color: '#fff', fontSize: 12}}>Boston, MA</Text>
           <TouchableHighlight style={{backgroundColor: '#3effff', borderColor:'#3effff', borderWidth: 1, borderRadius: 2, underlayColor:'transparent'}}>
           <Text style={{fontWeight:'bold', color: '#000', fontSize: 12, padding: 2}}>Buy Ticket</Text></TouchableHighlight>
         </View>
@@ -294,21 +292,21 @@ var {
       position: 'absolute',
       width: 300,
       height: 200,
-      top: 75,
+      top: 95,
       borderWidth: 1,
       borderColor: '#333',
       marginLeft:28
     },
     outerfullScreen: {
       position: 'absolute',
-      top: 75,
+      top: 95,
       marginLeft:28
     },
     controls: {
       backgroundColor: "transparent",
       borderRadius: 5,
       position: 'absolute',
-      bottom:400,
+      bottom:370,
       left: 70,
       right: 70,
     },
