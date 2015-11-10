@@ -11,6 +11,8 @@ var Parse = require('parse/react-native');
 var ParseReact = require('parse-react/react-native');
 var Login = require('./components/login');
 var Main = require('./components/main');
+var Player = require('./components/player');
+var Tested = require('./components/tested');
 Parse.initialize("OPfwbvfJPFfTiVBkMS3lFDQk8WSeBTpRZRqZGvzz", "TwVVZeNL5IIzz53kd5N1P6wE6X8VjKyt8vuyKf8Q");
 
 
@@ -20,13 +22,15 @@ var {
   Navigator
   } = React;
 
+
+
 var StageDive = React.createClass({
 
 
   render: function() {
     return (
       <Navigator
-                initialRoute={{name: 'StageDive', component: Main}}
+                initialRoute={{name: 'StageDive', component: Login}}
                 configureScene={() => {
                     return Navigator.SceneConfigs.FloatFromRight;
                 }}

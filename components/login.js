@@ -3,7 +3,7 @@
 var React = require('react-native');
 var Parse = require('parse/react-native');
 var ParseReact = require('parse-react/react-native');
-var Home = require('./home');
+var Main = require('./main');
 var SignUp = require('./signup');
 var Video = require('react-native-video');
 var Dimensions = require('Dimensions');
@@ -26,10 +26,10 @@ var Login = React.createClass({
       component: SignUp
     });
   },
-  goHome() {
+  goMain() {
     this.props.navigator.push({
-      title: "Home",
-      component: Home
+      title: "StageDive",
+      component: Main
     });
   },
 
@@ -46,7 +46,7 @@ var Login = React.createClass({
     let username = this.state.email;
     let password = this.state.password;
     this.setState({email: '', password: ''});
-    Parse.User.logIn(username, password).then(this.goHome.bind(this));
+    Parse.User.logIn(username, password).then(this.goMain(this));
 
   },
   render: function() {
@@ -81,7 +81,7 @@ var Login = React.createClass({
               width: 300,
               height: 40,
               borderColor: 'transparent',
-              color: "#3effff",
+              color: "#fff",
               fontWeight: 'bold'
             }} placeholder='email address'
             placeholderTextColor="#FFF"
@@ -102,7 +102,7 @@ var Login = React.createClass({
               width: 300,
               height: 40,
               borderColor: 'transparent',
-              color: "#3effff",
+              color: "#fff",
               fontWeight: 'bold'
             }} placeholder='Password'
             placeholderTextColor="#FFF"
@@ -112,26 +112,28 @@ var Login = React.createClass({
             password={true} />
           </View>
 
-          <View style={{
+          <TouchableHighlight style={{
             marginTop: 20,
             alignItems: 'center',
             width: 325,
-            backgroundColor: '3effff'
-          }}>
+            backgroundColor: '3effff'}}
+            onPress={this.handleSubmit}
+            underlayColor='transparent'>
             <Text style={{
               textAlign: 'center',
               margin: 20,
               fontSize: 14,
               fontWeight: 'bold'
             }}>Sign In</Text>
-          </View>
+        </TouchableHighlight>
           <TouchableHighlight
           onPress={() => this.signuplink()}
           underlayColor='transparent'
           >
           <Text style={{
             color: '#fff',
-            padding: 3
+            padding: 5,
+            fontSize: 11
           }}>Don't have an account? <Text style={{fontWeight:'bold'}}>Sign Up</Text></Text>
           </TouchableHighlight>
           </View>

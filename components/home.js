@@ -57,7 +57,7 @@ var {
 
         return (
         <View style={styles.container}>
-        <Carousel delay={7000} style={{width: width, height: 250, borderWidth: 1, borderBottomColor: '#3effff', borderTopColor: '#333'}}>
+        <Carousel delay={7000} style={{width: width, height: 250, borderWidth: 1, borderBottomColor: '#3effff'}}>
           <TouchableHighlight
           onPress={() => this.jayzBeyonce()}
           underlayColor='transparent'>

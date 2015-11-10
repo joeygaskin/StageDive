@@ -80,7 +80,13 @@ var VideoPlayer = React.createClass({
               return <Video source={{uri: pass.get('media').url()}} volume={1.0} />;
             })}
 
+
         </View>
+        <Text>
+        {this.state.unlockedPasses.map(function(pass){
+          return pass.get('title');})}</Text>
+
+
 
       </View>
     </ScrollView>

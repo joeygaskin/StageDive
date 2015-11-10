@@ -13,7 +13,8 @@ var ScrollableTabView = require('react-native-scrollable-tab-view');
 var Icon = require('react-native-vector-icons/Ionicons');
 var StageDiveTabBar = require('./StageDiveTabBar');
 var CustomTabBar = require('./customtabbar');
-var { Icon, TabBarIOS, } = require('react-native-icons');
+var VIP = require('./vip');
+var { Icon, } = require('react-native-icons');
 var Home = require('./home');
 
 var {
@@ -24,18 +25,16 @@ var {
     Image,
     TouchableHighlight,
     Navigator,
-    TabBarIOS
+    TabBarIOS,
+    ScrollView
     } = React;
-
-
-
 
 
           var Main = React.createClass({
 
             render() {
               return (
-                <ScrollableTabView >
+                <ScrollableTabView>
                   <Navigator
                             initialRoute={{name: 'StageDive', component: Home}}
                             configureScene={() => {
@@ -50,9 +49,10 @@ var {
                                 }
                             }}
                          tabLabel="StageDive" />
-                  <TaylorSwift/>
-                  <KanyeWest/>
-                  <SignUp tabLabel="Settings"/>
+                       <TaylorSwift tabLabel="Favorites" style={{backgroundColor: '#000'}}/>
+                  <VIP tabLabel="VIP"/>
+
+                  <TaylorSwift tabLabel="Settings"/>
                 </ScrollableTabView>
               );
             }
@@ -108,6 +108,11 @@ var {
       backgroundColor: '#000',
       top: 70,
       right: 15
+    },
+    beer: {
+      width: 15,
+      height: 15,
+      color: '#887700'
     },
   });
 

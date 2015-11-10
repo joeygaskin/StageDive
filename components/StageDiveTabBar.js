@@ -7,6 +7,7 @@ var {
   View,
   TouchableOpacity,
   Dimensions,
+  Animated
 } = React;
 
 var { Icon, } = require('react-native-icons');
@@ -18,17 +19,18 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 10,
+    backgroundColor: '#181818'
   },
 
   tabs: {
-    height: 45,
+    height: 50,
     flexDirection: 'row',
     paddingTop: 5,
     borderWidth: 1,
     borderTopWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 0,
-    borderBottomColor: 'rgba(0,0,0,0.05)',
+    borderBottomColor: '#111',
   },
 });
 
@@ -75,9 +77,23 @@ var StageDiveTabBar = React.createClass({
   },
 
   render() {
+    var numberOfTabs = this.props.tabs.length;
+    var tabUnderlineStyle = {
+      position: 'absolute',
+      width: deviceWidth / numberOfTabs,
+      height: 4,
+      backgroundColor: '#3effff',
+      bottom: 0,
+    };
+
+    var left = this.props.scrollValue.interpolate({
+      inputRange: [0, 1], outputRange: [0, deviceWidth / numberOfTabs]
+    });
+
     return (
       <View style={styles.tabs}>
         {this.props.tabs.map((tab, i) => this.renderTabOption(tab, i))}
+        <Animated.View style={[tabUnderlineStyle, {left}]} />
       </View>
     );
   },
