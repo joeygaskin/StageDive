@@ -18,6 +18,10 @@ var {
 
 
     var TaylorSwift = React.createClass({
+      jumpBack: function() {
+        this.props.navigator.jumpBack();
+      },
+
       getInitialState() {
         return {
           rate: 1,
@@ -93,17 +97,23 @@ var {
         source={{uri: 'http://static1.squarespace.com/static/54245dc1e4b0cee499909324/54329343e4b00d226ec86d54/54579adee4b07aecc2890781/1415371745268/?format=1500w'}}>
         <Image style={{ position: 'absolute', top: 80, left: 30, width: 125, height: 125, borderWidth: 1, borderColor: '#ccc'}}
         source={{uri: 'https://pbs.twimg.com/profile_images/505200807503867904/osJXmYRl.jpeg'}}/>
+        <TouchableOpacity
+        onPress={() => this.jumpBack()}
+        underlayColor='transparent'
+        ><Image style={{position: 'absolute', top: 10, left: 15, width: 50, height: 25,
+        opacity: .7, backgroundColor: 'transparent'}} source={{uri: 'http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-1f2d1d01-9356-4583-853c-a9bf4e6d9ea5-backbtnw.png'}} />
+        </TouchableOpacity>
         <View style={styles.text3}>
         <Text style={{
         alignText: 'center',
-        color: '#000',
+        color: '#fff',
         fontWeight: 'bold',
         fontSize: 18}}>Taylor Swift</Text>
         </View>
         <View style={styles.text4}>
         <Text style={{
         alignText: 'center',
-        color: '#000',
+        color: '#fff',
         fontWeight: 'bold',
         fontSize: 14}}>The 1989 Tour</Text></View>
         <TouchableHighlight style={{position: 'absolute', top:260, left:30, width: 125, backgroundColor: '#3effff',
@@ -129,7 +139,7 @@ var {
         </View>
 
             <TouchableOpacity style={styles.outerfullScreen} onPress={() => {this.setState({paused: !this.state.paused})}}>
-              <Video source={{uri: "http://r1---sn-5uaezns7.googlevideo.com/videoplayback?initcwndbps=876250&id=o-ABEsGiphdhrTlKzDnmHkvyoVfs8V02ql2rbP-ZuKKzlZ&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cnh%2Cpl%2Cratebypass%2Csource%2Cupn%2Cexpire&ip=75.136.106.197&key=yt6&upn=B8EvaV645fI&pl=19&expire=1447148038&nh=IgpwcjAxLmF0bDAxKgkxMjcuMC4wLjE&lmt=1427885921586047&signature=6C1E54D166AAF568542D24784A16F8FDF20AA5BC.DAF85EAB19C4543B0643ED19AAC62A269E0007C3&ipbits=0&mime=video%2Fmp4&itag=22&sver=3&mt=1447126373&mv=m&ms=au&dur=15.023&ratebypass=yes&source=youtube&mm=31&mn=sn-5uaezns7&title=Taylor%20Swift%27s%20The%201989%20World%20Tour"}}
+              <Video source={{uri: "http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-f23f5125-be37-462f-8483-55677e2aa954-1989.mp4"}}
                      style={styles.fullScreen}
                      rate={this.state.rate}
                      paused={!this.state.paused}

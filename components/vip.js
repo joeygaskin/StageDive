@@ -63,8 +63,9 @@ var VIP = React.createClass({
     let currentGeoPoint = new Parse.GeoPoint(position.coords);
     let query = new Parse.Query("ExclusivePass");
     query.withinKilometers("location", currentGeoPoint, 1);
-    query.find().then((unlockedPasses) => {this.setState({unlockedPasses});}
-    );
+    query.find().then((unlockedPasses) => {
+      this.setState({unlockedPasses});
+    });
   },
 
   getMusicInitialState() {
@@ -72,6 +73,7 @@ var VIP = React.createClass({
       rate: 1,
       volume: 1,
       muted: false,
+      paused: true,
       duration: 0.0,
       currentTime: 0.0,
     }
@@ -99,8 +101,8 @@ var VIP = React.createClass({
     return (
       <ScrollView>
       <TouchableOpacity onPress={() => {this.setState({paused: !this.state.paused})}}>
-      {this.state.unlockedPasses.map(function(pass){
-        return <Video source={{uri: pass.get('media').url()}} paused={true} />;
+      {this.state.unlockedPasses.map((pass) => {
+        return <Video source={{uri: pass.get('media').url()}} paused={!this.state.paused} />;
       })}
 
 

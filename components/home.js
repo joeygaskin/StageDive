@@ -20,7 +20,7 @@ var {width, height} = Dimensions.get('window');
 var KanyeWest = require('./kanyewest');
 var TaylorSwift = require('./taylorswift');
 var Video = require('react-native-video');
-var JayZandBeyonce = require('./jayzbeyonce');
+var JAYZandBeyonce = require('./jayzbeyonce');
 
 
 var {
@@ -50,7 +50,7 @@ var {
       jayzBeyonce: function() {
         this.props.navigator.push({
           title: 'JAY-Z & Beyonce : On The Run Tour',
-          component: JayZandBeyonce
+          component: JAYZandBeyonce
         });
       },
       render: function() {
@@ -61,7 +61,7 @@ var {
           <TouchableHighlight
           onPress={() => this.jayzBeyonce()}
           underlayColor='transparent'>
-          <Image source={{uri: 'http://static.parkwoodent.netdna-cdn.com/wp-content/uploads/2014/04/OnTheRun_TourHero.jpg'}}
+          <Image source={{uri: 'http://static.parkwoodent.netdna-cdn.com/wp-content/uploads/2014/07/RH_SEATTLE_SHOW-6243.jpg'}}
           style={{width: width, height: 250}}>
           <View style={styles.text1}>
           <Text style={{
@@ -79,8 +79,8 @@ var {
           <TouchableHighlight
           onPress={() => this.kanyeWest()}
           underlayColor='transparent'>
-          <Image source={{uri: 'http://assets.rollingstone.com/assets/2014/article/kanye-wests-yeezus-tour-reconstructed-with-fan-made-video-20141201/176025/large_rect/1417448414/1401x788-454677078.jpg'}}
-          style={{width: width, height: 400}}>
+          <Image source={{uri: 'http://illsocietymag.com/wp-content/uploads/2014/12/4.jpg'}}
+          style={{width: width, height: 300}}>
           <View style={styles.text3}>
           <Text style={{
           color: '#fff',
@@ -97,8 +97,8 @@ var {
           <TouchableHighlight
           onPress={() => this.taylorSwift()}
           underlayColor='transparent'>
-          <Image source={{uri: 'http://mushroompromotions.com/wp-content/uploads/2014/12/TS15_Facebook_1200x6272.jpg'}}
-          style={{width: width, height: 300}}>
+          <Image source={{uri: 'http://24h-img.24hstatic.com/upload/4-2015/images/2015-10-19/1445247423-1445229024-taylor-swift-2.jpg'}}
+          style={{width: width, height: 450}}>
           <View style={styles.text5}>
           <Text style={{
           color: '#fff',
@@ -162,13 +162,13 @@ var {
     text5: {
       position: 'absolute',
       backgroundColor: '#000',
-      top: 50,
+      top: 110,
       right: 15
     },
     text6: {
       position: 'absolute',
       backgroundColor: '#000',
-      top: 70,
+      top: 130,
       right: 15
     },
   });

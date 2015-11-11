@@ -18,6 +18,10 @@ var {
 
 
     var KanyeWest = React.createClass({
+      jumpBack: function() {
+        this.props.navigator.jumpBack();
+      },
+
       getInitialState() {
         return {
           rate: 1,
@@ -90,9 +94,15 @@ var {
 
         <View style={{borderWidth: 1, borderTopColor: '#222'}}>
         <Image style={{width: width, height: 300, backgroundColor: '#000'}}
-        source={{uri: 'http://cdn.defjam.com/wp-content/uploads/2013/09/BTey1lRCAAACbdO.jpg_large-828x1024.jpg'}}>
+        source={{uri: 'https://consequenceofsound.files.wordpress.com/2013/12/kanye-west-yeezus-tour-by-joshua-mellin_11447073426_l.jpg'}}>
         <Image style={{ position: 'absolute', top: 80, left: 30, width: 125, height: 125, borderWidth: 1, borderColor: '#ccc'}}
         source={{uri: 'https://consequenceofsound.files.wordpress.com/2013/09/kanye-yeezus2.jpg'}}/>
+        <TouchableOpacity
+        onPress={() => this.jumpBack()}
+        underlayColor='transparent'
+        ><Image style={{position: 'absolute', top: 10, left: 15, width: 50, height: 25,
+        opacity: .2, backgroundColor: 'transparent'}} source={{uri: 'http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-1f2d1d01-9356-4583-853c-a9bf4e6d9ea5-backbtnw.png'}} />
+        </TouchableOpacity>
         <View style={styles.text3}>
           <Text style={{
           alignText: 'center',
@@ -131,7 +141,7 @@ var {
 
 
             <TouchableOpacity style={styles.outerfullScreen} onPress={() => {this.setState({paused: !this.state.paused})}}>
-              <Video source={{uri: "http://r1---sn-5uaezns7.googlevideo.com/videoplayback?initcwndbps=876250&id=o-ABEsGiphdhrTlKzDnmHkvyoVfs8V02ql2rbP-ZuKKzlZ&sparams=dur%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cnh%2Cpl%2Cratebypass%2Csource%2Cupn%2Cexpire&ip=75.136.106.197&key=yt6&upn=B8EvaV645fI&pl=19&expire=1447148038&nh=IgpwcjAxLmF0bDAxKgkxMjcuMC4wLjE&lmt=1427885921586047&signature=6C1E54D166AAF568542D24784A16F8FDF20AA5BC.DAF85EAB19C4543B0643ED19AAC62A269E0007C3&ipbits=0&mime=video%2Fmp4&itag=22&sver=3&mt=1447126373&mv=m&ms=au&dur=15.023&ratebypass=yes&source=youtube&mm=31&mn=sn-5uaezns7&title=Taylor%20Swift%27s%20The%201989%20World%20Tour"}}
+              <Video source={{uri: "http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-129a581c-b8da-4b8e-ad6f-ccea25aa7e6d-yeezus.mp4"}}
                      style={styles.fullScreen}
                      rate={this.state.rate}
                      paused={!this.state.paused}

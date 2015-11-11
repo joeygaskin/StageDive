@@ -78,7 +78,7 @@ var Pass = React.createClass({
         dataSource: ds.cloneWithRows(['row 1', 'row 2']),
       };
     },
-    
+
 
 watchID: (null: ?number),
 
@@ -132,7 +132,9 @@ handleLocationChange(position) {
     },
 
     renderPass(pass) {
-
+        this.state.unlockedPasses.map(function(pass){
+          alert("You've unlocked " + pass.get('title'));
+        })
         return (
             <TouchableHighlight onPress={() => {this.setState({paused: !this.state.paused})}}  underlayColor='#dddddd'>
                 <View>

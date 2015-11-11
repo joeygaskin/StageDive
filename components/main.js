@@ -4,11 +4,10 @@ var React = require('react-native');
 var Carousel = require('react-native-looped-carousel');
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
-var KanyeWest = require('./kanyewest');
-var TaylorSwift = require('./taylorswift');
+var OneDirection = require('./onedirection');
+
 var VideoPlayer = require('./videoplayer')
 var Video = require('react-native-video');
-var SignUp = require('./signup');
 var ScrollableTabView = require('react-native-scrollable-tab-view');
 var Icon = require('react-native-vector-icons/Ionicons');
 var StageDiveTabBar = require('./StageDiveTabBar');
@@ -30,33 +29,31 @@ var {
     } = React;
 
 
-          var Main = React.createClass({
+  var Main = React.createClass({
+    render() {
+      return (
+        <ScrollableTabView>
+          <Navigator
+                    initialRoute={{name: 'StageDive', component: Home}}
+                    configureScene={() => {
+                        return Navigator.SceneConfigs.FloatFromRight;
+                    }}
+                    renderScene={(route, navigator) => {
+                        // count the number of func calls
+                        // console.log(route, navigator);
 
-            render() {
-              return (
-                <ScrollableTabView>
-                  <Navigator
-                            initialRoute={{name: 'StageDive', component: Home}}
-                            configureScene={() => {
-                                return Navigator.SceneConfigs.FloatFromRight;
-                            }}
-                            renderScene={(route, navigator) => {
-                                // count the number of func calls
-                                console.log(route, navigator);
+                        if (route.component) {
+                            return React.createElement(route.component, { navigator });
+                        }
+                    }}
+                 tabLabel="StageDive"/>
 
-                                if (route.component) {
-                                    return React.createElement(route.component, { navigator });
-                                }
-                            }}
-                         tabLabel="StageDive" />
-                       <TaylorSwift tabLabel="Favorites" style={{backgroundColor: '#000'}}/>
-                  <VIP tabLabel="VIP"/>
-
-                  <TaylorSwift tabLabel="Settings"/>
-                </ScrollableTabView>
-              );
-            }
-          });
+               <VIP tabLabel="VIP Access"/>
+               <OneDirection/>
+        </ScrollableTabView>
+      );
+    }
+  });
 
     var styles = StyleSheet.create({
     container: {
@@ -115,7 +112,5 @@ var {
       color: '#887700'
     },
   });
-
-
 
 module.exports = Main;

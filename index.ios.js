@@ -12,7 +12,9 @@ var ParseReact = require('parse-react/react-native');
 var Login = require('./components/login');
 var Main = require('./components/main');
 var Player = require('./components/player');
+var SignUp = require('./components/signup');
 var Tested = require('./components/tested');
+var VIP = require ('./components/vip')
 Parse.initialize("OPfwbvfJPFfTiVBkMS3lFDQk8WSeBTpRZRqZGvzz", "TwVVZeNL5IIzz53kd5N1P6wE6X8VjKyt8vuyKf8Q");
 
 
@@ -36,7 +38,7 @@ var StageDive = React.createClass({
                 }}
                 renderScene={(route, navigator) => {
                     // count the number of func calls
-                    console.log(route, navigator);
+                    // console.log(route, navigator);
 
                     if (route.component) {
                         return React.createElement(route.component, { navigator });

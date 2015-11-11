@@ -1,12 +1,11 @@
 'use strict';
 var React = require('react-native');
-var Main = require('./main');
 var Parse = require('parse/react-native');
 var ParseReact = require('parse-react/react-native');
 var Video = require('react-native-video');
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
-
+var Main = require('./main');
 
 var {
   StyleSheet,
@@ -22,7 +21,7 @@ var {
 
       goMain() {
         this.props.navigator.push({
-          title: "StageDive",
+          name: "Main",
           component: Main
         });
       },
@@ -41,12 +40,13 @@ var {
 
       handleSubmit(event) {
         event.preventDefault();
-
         let email = this.state.email;
         let username = email
         let password = this.state.password;
         Parse.User.signUp(username, password, {email}).then((user) => {
           this.goMain();
+        }, function(error) {
+          alert(error.message);
         });
       },
 
