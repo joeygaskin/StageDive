@@ -32,7 +32,7 @@ var StageDive = React.createClass({
   render: function() {
     return (
       <Navigator
-                initialRoute={{name: 'StageDive', component: Main}}
+                initialRoute={{name: 'StageDive', component: Login}}
                 configureScene={() => {
                     return Navigator.SceneConfigs.FloatFromRight;
                 }}

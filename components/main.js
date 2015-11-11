@@ -49,7 +49,7 @@ var {
                  tabLabel="StageDive"/>
 
                <VIP tabLabel="VIP Access"/>
-               <OneDirection/>
+
         </ScrollableTabView>
       );
     }

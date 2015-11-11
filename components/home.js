@@ -9,7 +9,7 @@ var KanyeWest = require('./kanyewest');
 var TaylorSwift = require('./taylorswift');
 var Video = require('react-native-video');
 var JAYZandBeyonce = require('./jayzbeyonce');
-
+var OneDirection = require('./onedirection.js');
 
 var {
     StyleSheet,
@@ -40,6 +40,12 @@ var {
         this.props.navigator.push({
           title: 'JAY-Z & Beyonce : On The Run Tour',
           component: JAYZandBeyonce
+        });
+      },
+      oneDirection: function() {
+        this.props.navigator.push({
+          title: 'One Direction : On The Road Again Tour',
+          component: OneDirection
         });
       },
 
@@ -111,7 +117,7 @@ var {
         var flexRemaining = (1 - this.getCurrentTimePercentage()) * 100;
         return (
         <View style={styles.container}>
-        <Carousel delay={7000} style={{width: width, height: 250, borderWidth: 1, borderBottomColor: '#3effff'}}>
+        <Carousel delay={7000} style={{width: width, height: 250}}>
           <TouchableHighlight
           onPress={() => this.jayzBeyonce()}
           underlayColor='transparent'>
@@ -168,7 +174,7 @@ var {
         </TouchableHighlight>
         </Carousel>
         <View style={{backgroundColor: '#000', flexDirection: 'row',
-          width: width, height: 130}}>
+          width: width, height: 130, borderWidth: 1, borderColor: '#3effff', overflow: 'hidden'}}>
           <Image style={{width: 167, height: 130, position:'absolute', left:20}} source={{uri: 'sam'}}/>
           <View style={{position: 'absolute', right:0}}>
             <TouchableOpacity onPress={() => {this.setState({paused: !this.state.paused})}}>
@@ -193,9 +199,23 @@ var {
         </View>
         <View style={{backgroundColor: '#000', flexDirection: 'row',
           width: width, height: 130, borderWidth: 1, borderTopColor: '#111'}}>
-          <Image source={{uri:'zummer'}}  style={{width: 278, height: 130}}/>
+          <Image source={{uri:'zummer'}}  style={{width: 278, height: 130, borderWidth: 1, borderColor: '#3effff'}}/>
+            <TouchableOpacity
+            onPress={() => this.oneDirection()}
+            underlayColor='transparent'>
+          <Image source={{uri: 'http://www.ontheroadagain1d.com/assets/images/background-phone.jpg'}}
+            style={{width: 135, height: 130, borderWidth: 1, borderColor: '#3effff'}}/>
+        </TouchableOpacity>
         </View>
-
+        <View >
+          <Carousel delay={4000} style={{backgroundColor: '#000', flexDirection: 'row',
+            width: width, height: 200, borderWidth: 1, borderColor: '#3effff'}}>
+          <Image source={{uri: 'coldplayghost.jpg'}}
+            style={{width: width, height: 200}}/>
+          <Image source={{uri: 'jungle.png'}}
+              style={{width: width, height: 180, }}/>
+          </Carousel>
+        </View>
 
 
 
