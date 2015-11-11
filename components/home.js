@@ -1,16 +1,4 @@
-// <Video source={{uri: "otrvideo"}}
-//  rate={1.0}
-//  volume={1.0}
-//  muted={true}
-//  paused={false}
-//  resizeMode="contain"
-//  repeat={true}
-//  onLoadStart={this.loadStart}
-//  onLoad={this.setDuration}
-//  onProgress={this.setTime}
-//  onEnd={this.onEnd}
-//  onError={this.videoError}
-//  style={{width:300, height:200}} />
+
 'use strict';
 
 var React = require('react-native');
@@ -29,7 +17,8 @@ var {
     Text,
     Component,
     Image,
-    TouchableHighlight
+    TouchableHighlight,
+    TouchableOpacity
     } = React;
 
 
@@ -53,8 +42,73 @@ var {
           component: JAYZandBeyonce
         });
       },
-      render: function() {
 
+      getInitialState() {
+        return {
+          rate: 1,
+          volume: 0,
+          muted: false,
+          resizeMode: 'cover',
+          duration: 0.0,
+          currentTime: 0.0,
+        }
+      },
+
+      onLoad(data) {
+        this.setState({duration: data.duration});
+      },
+
+      onProgress(data) {
+        this.setState({currentTime: data.currentTime});
+      },
+
+      getCurrentTimePercentage() {
+        if (this.state.currentTime > 0) {
+          return parseFloat(this.state.currentTime) / parseFloat(this.state.duration);
+        } else {
+          return 0;
+        }
+      },
+
+      renderRateControl(rate) {
+        var isSelected = (this.state.rate == rate);
+
+        return (
+          <TouchableOpacity onPress={() => { this.setState({rate: rate}) }}>
+            <Text style={[styles.controlOption, {fontWeight: isSelected ? "bold" : "normal"}]}>
+              {rate}x
+            </Text>
+          </TouchableOpacity>
+        )
+      },
+
+      renderResizeModeControl(resizeMode) {
+        var isSelected = (this.state.resizeMode == resizeMode);
+
+        return (
+          <TouchableOpacity onPress={() => { this.setState({resizeMode: resizeMode}) }}>
+            <Text style={[styles.controlOption, {fontWeight: isSelected ? "bold" : "normal"}]}>
+              {resizeMode}
+            </Text>
+          </TouchableOpacity>
+        )
+      },
+
+      renderVolumeControl(volume) {
+        var isSelected = (this.state.volume == volume);
+
+        return (
+          <TouchableOpacity onPress={() => { this.setState({volume: volume}) }}>
+            <Text style={[styles.controlOption, {fontWeight: isSelected ? "bold" : "normal"}]}>
+              {volume * 100}%
+            </Text>
+          </TouchableOpacity>
+        )
+      },
+
+      render: function() {
+        var flexCompleted = this.getCurrentTimePercentage() * 100;
+        var flexRemaining = (1 - this.getCurrentTimePercentage()) * 100;
         return (
         <View style={styles.container}>
         <Carousel delay={7000} style={{width: width, height: 250, borderWidth: 1, borderBottomColor: '#3effff'}}>
@@ -113,17 +167,47 @@ var {
           </Image>
         </TouchableHighlight>
         </Carousel>
-        <View style={styles.moreshows}>
+        <View style={{backgroundColor: '#000', flexDirection: 'row',
+          width: width, height: 130}}>
+          <Image style={{width: 167, height: 130, position:'absolute', left:20}} source={{uri: 'sam'}}/>
+          <View style={{position: 'absolute', right:0}}>
+            <TouchableOpacity onPress={() => {this.setState({paused: !this.state.paused})}}>
+              <Video source={{uri: 'latch'}}
+                     style={styles.fullScreen}
+                     rate={this.state.rate}
+                     paused={this.state.paused}
+                     volume={this.state.volume}
+                     muted={this.state.muted}
+                     resizeMode={this.state.resizeMode}
+                     onLoad={this.onLoad}
+                     onProgress={this.onProgress}
+                     onEnd={this.onEnd}
+                     repeat={true} />
+            </TouchableOpacity>
+            <View style={styles.volumeControl}>
+              {this.renderVolumeControl(0)}
+              {this.renderVolumeControl(1)}
+              {this.renderVolumeControl(1.5)}
+            </View>
+          </View>
         </View>
+        <View style={{backgroundColor: '#000', flexDirection: 'row',
+          width: width, height: 130, borderWidth: 1, borderTopColor: '#111'}}>
+          <Image source={{uri:'zummer'}}  style={{width: 278, height: 130}}/>
         </View>
+
+
+
+
+
+      </View>
         );
       }
-    });
+  });
 
     var styles = StyleSheet.create({
     container: {
       flex: 1,
-
       alignItems: 'center',
       width: null,
       height: null,
@@ -171,7 +255,68 @@ var {
       top: 130,
       right: 15
     },
+    fullScreen: {
+      width: 230,
+      height: 130
+    },
+    controls: {
+      backgroundColor: "transparent",
+      borderRadius: 5,
+      position: 'absolute',
+      bottom:370,
+      left: 70,
+      right: 70,
+    },
+    progress: {
+      flex: 1,
+      flexDirection: 'row',
+      borderRadius: 3,
+      overflow: 'hidden',
+    },
+    innerProgressCompleted: {
+      height: 20,
+      backgroundColor: '#cccccc',
+    },
+    innerProgressRemaining: {
+      height: 20,
+      backgroundColor: '#2C2C2C',
+    },
+    generalControls: {
+      flex: 1,
+      flexDirection: 'row',
+      borderRadius: 4,
+      overflow: 'hidden',
+      paddingBottom: 10,
+    },
+    rateControl: {
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'center',
+    },
+    volumeControl: {
+      position: 'absolute',
+      flex: 1,
+      flexDirection: 'row',
+      backgroundColor: 'transparent',
+      right: 8,
+      top: 110
+    },
+    resizeModeControl: {
+      flex: 1,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    controlOption: {
+      alignSelf: 'center',
+      fontSize: 11,
+      color: "white",
+      paddingLeft: 2,
+      paddingRight: 2,
+      lineHeight: 12,
+    },
   });
+
 
 
 

@@ -303,7 +303,7 @@ var {
       height: 200,
       top: 105,
       borderWidth: 1,
-      borderColor: '#333',
+      borderColor: '#3effff',
       marginLeft:28
     },
     outerfullScreen: {

@@ -307,7 +307,7 @@ var {
       height: 200,
       top: 75,
       borderWidth: 1,
-      borderColor: '#333',
+      borderColor: '#3effff',
       marginLeft:28
     },
     outerfullScreen: {

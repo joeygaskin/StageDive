@@ -32,6 +32,9 @@
 		C9455DE21BF0929400EA48D5 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9455DDD1BF0929400EA48D5 /* ionicons.ttf */; };
 		C9455DE31BF0929400EA48D5 /* Material-Design-Iconic-Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9455DDE1BF0929400EA48D5 /* Material-Design-Iconic-Font.ttf */; };
 		C9455DE41BF0929400EA48D5 /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9455DDF1BF0929400EA48D5 /* zocial-regular-webfont.ttf */; };
+		C95D2DD51BF31B8C008601B1 /* latch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C95D2DD41BF31B8B008601B1 /* latch.mp4 */; };
+		C95D2DD71BF32D8C008601B1 /* sam.png in Resources */ = {isa = PBXBuildFile; fileRef = C95D2DD61BF32D8A008601B1 /* sam.png */; };
+		C95D2DD91BF33FBE008601B1 /* zummer.png in Resources */ = {isa = PBXBuildFile; fileRef = C95D2DD81BF33FBD008601B1 /* zummer.png */; };
 		C9E7C73B1BEF115A008D2CA1 /* ministri.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C9E7C72F1BEF0FC8008D2CA1 /* ministri.mp4 */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +163,9 @@
 		C9455DDD1BF0929400EA48D5 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = "../node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/ionicons.ttf"; sourceTree = "<group>"; };
 		C9455DDE1BF0929400EA48D5 /* Material-Design-Iconic-Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Material-Design-Iconic-Font.ttf"; path = "../node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/Material-Design-Iconic-Font.ttf"; sourceTree = "<group>"; };
 		C9455DDF1BF0929400EA48D5 /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zocial-regular-webfont.ttf"; path = "../node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
+		C95D2DD41BF31B8B008601B1 /* latch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = latch.mp4; path = ../latch.mp4; sourceTree = "<group>"; };
+		C95D2DD61BF32D8A008601B1 /* sam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sam.png; path = ../sam.png; sourceTree = "<group>"; };
+		C95D2DD81BF33FBD008601B1 /* zummer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zummer.png; path = ../zummer.png; sourceTree = "<group>"; };
 		C9E7C72F1BEF0FC8008D2CA1 /* ministri.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = ministri.mp4; path = ../ministri.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -326,6 +332,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				C95D2DD81BF33FBD008601B1 /* zummer.png */,
+				C95D2DD61BF32D8A008601B1 /* sam.png */,
+				C95D2DD41BF31B8B008601B1 /* latch.mp4 */,
 				C9455DDB1BF0929400EA48D5 /* FontAwesome.otf */,
 				C9455DDC1BF0929400EA48D5 /* foundation-icons.ttf */,
 				C9455DDD1BF0929400EA48D5 /* ionicons.ttf */,
@@ -594,12 +603,15 @@
 				C9455DE21BF0929400EA48D5 /* ionicons.ttf in Resources */,
 				C9455DE31BF0929400EA48D5 /* Material-Design-Iconic-Font.ttf in Resources */,
 				C9455DE41BF0929400EA48D5 /* zocial-regular-webfont.ttf in Resources */,
+				C95D2DD71BF32D8C008601B1 /* sam.png in Resources */,
 				008F07F31AC5B25A0029DE68 /* main.jsbundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				C95D2DD51BF31B8C008601B1 /* latch.mp4 in Resources */,
 				C9E7C73B1BEF115A008D2CA1 /* ministri.mp4 in Resources */,
 				C93AA3F51BEB1538003220A0 /* otrvideo.mp4 in Resources */,
 				C93AA4081BEB2559003220A0 /* moments.mp4 in Resources */,
+				C95D2DD91BF33FBE008601B1 /* zummer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
