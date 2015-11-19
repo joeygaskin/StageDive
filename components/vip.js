@@ -99,7 +99,7 @@ var VIP = React.createClass({
 
   render: function() {
     return (
-      <ScrollView>
+      <ScrollView style={{backgroundColor: '#F5FCFF'}}>
       <TouchableOpacity onPress={() => {this.setState({paused: !this.state.paused})}}>
       {this.state.unlockedPasses.map((pass) => {
         return <Video source={{uri: pass.get('media').url()}} paused={!this.state.paused} />;
@@ -118,7 +118,7 @@ var VIP = React.createClass({
                       </Text>
                       <Text style={styles.author}>
                       {this.state.unlockedPasses.map(function(pass){
-                        return pass.get('title');})}
+                        return pass.get('description');})}
                       </Text>
                   </View>
               </View>
@@ -135,7 +135,8 @@ var styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+
     },
     title: {
         fontSize: 20,

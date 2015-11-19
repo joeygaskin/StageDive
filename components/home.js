@@ -4,12 +4,17 @@
 var React = require('react-native');
 var Carousel = require('react-native-looped-carousel');
 var Dimensions = require('Dimensions');
-var {width, height} = Dimensions.get('window');
-var KanyeWest = require('./kanyewest');
-var TaylorSwift = require('./taylorswift');
 var Video = require('react-native-video');
+var {width, height} = Dimensions.get('window');
+
+var Coldplay = require('./coldplay');
+var Drake = require('./drake');
+var FallOutBoyWiz = require('./falloutboywiz');
 var JAYZandBeyonce = require('./jayzbeyonce');
-var OneDirection = require('./onedirection.js');
+var KanyeWest = require('./kanyewest');
+var OneDirection = require('./onedirection');
+var SamSmith = require('./samsmith');
+var TaylorSwift = require('./taylorswift');
 
 var {
     StyleSheet,
@@ -46,6 +51,30 @@ var {
         this.props.navigator.push({
           title: 'One Direction : On The Road Again Tour',
           component: OneDirection
+        });
+      },
+      coldplay: function() {
+        this.props.navigator.push({
+          title: 'Coldplay : Ghost Stories Tour',
+          component: Coldplay
+        });
+      },
+      drake: function() {
+        this.props.navigator.push({
+          title: 'Drake : The Jungle Tour',
+          component: Drake
+        });
+      },
+      falloutboyWiz: function() {
+        this.props.navigator.push({
+          title: 'Fall Out Boy x Wiz Khalifa : The Boys of Zummer Tour',
+          component: FallOutBoyWiz
+        });
+      },
+      samSmith: function() {
+        this.props.navigator.push({
+          title: 'Sam Smith : Sam Smith Tour',
+          component: SamSmith
         });
       },
 
@@ -175,7 +204,11 @@ var {
         </Carousel>
         <View style={{backgroundColor: '#000', flexDirection: 'row',
           width: width, height: 130, borderWidth: 1, borderColor: '#3effff', overflow: 'hidden'}}>
+          <TouchableOpacity
+          onPress={() => this.samSmith()}
+          underlayColor='transparent'>
           <Image style={{width: 167, height: 130, position:'absolute', left:20}} source={{uri: 'sam'}}/>
+          </TouchableOpacity>
           <View style={{position: 'absolute', right:0}}>
             <TouchableOpacity onPress={() => {this.setState({paused: !this.state.paused})}}>
               <Video source={{uri: 'latch'}}
@@ -199,7 +232,11 @@ var {
         </View>
         <View style={{backgroundColor: '#000', flexDirection: 'row',
           width: width, height: 130, borderWidth: 1, borderTopColor: '#111'}}>
+          <TouchableOpacity
+          onPress={() => this.falloutboyWiz()}
+          underlayColor='transparent'>
           <Image source={{uri:'zummer'}}  style={{width: 278, height: 130, borderWidth: 1, borderColor: '#3effff'}}/>
+          </TouchableOpacity>
             <TouchableOpacity
             onPress={() => this.oneDirection()}
             underlayColor='transparent'>
@@ -207,13 +244,21 @@ var {
             style={{width: 135, height: 130, borderWidth: 1, borderColor: '#3effff'}}/>
         </TouchableOpacity>
         </View>
-        <View >
+        <View>
           <Carousel delay={4000} style={{backgroundColor: '#000', flexDirection: 'row',
             width: width, height: 200, borderWidth: 1, borderColor: '#3effff'}}>
+            <TouchableOpacity
+            onPress={() => this.coldplay()}
+            underlayColor='transparent'>
           <Image source={{uri: 'coldplayghost.jpg'}}
             style={{width: width, height: 200}}/>
+          </TouchableOpacity>
+          <TouchableOpacity
+          onPress={() => this.drake()}
+          underlayColor='transparent'>
           <Image source={{uri: 'jungle.png'}}
               style={{width: width, height: 180, }}/>
+          </TouchableOpacity>
           </Carousel>
         </View>
 

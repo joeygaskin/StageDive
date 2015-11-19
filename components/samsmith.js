@@ -17,7 +17,7 @@ var {
     } = React;
 
 
-    var Drake = React.createClass({
+    var SamSmith = React.createClass({
       jumpBack: function() {
         this.props.navigator.jumpBack();
       },
@@ -94,28 +94,28 @@ var {
 
         <View style={{borderWidth: 1, borderTopColor: '#222'}}>
         <Image style={{width: width, height: 300, backgroundColor: '#000'}}
-        source={{uri: 'http://cdn.stupiddope.com/wp-content/uploads/2015/05/drake-drops-a-new-freestyle-at-jungle-tours-stop-in-detroit-0-1024x682.jpg'}}>
+        source={{uri: 'http://static.independent.co.uk/s3fs-public/styles/story_large/public/thumbnails/image/2015/07/16/17/sam-smith.jpg'}}>
         <Image style={{ position: 'absolute', top: 80, left: 30, width: 125, height: 125, borderWidth: 1, borderColor: '#ccc'}}
-        source={{uri: 'http://2.bp.blogspot.com/-hqrTXfOKvgE/VSt0GeF_wHI/AAAAAAAAAaU/qYxw7dDH0bY/s1600/JUNGLE%2BPOSTERS%2BDATE%2BCHANGE-01.png'}}/>
+        source={{uri: 'http://crypticrock.com/wp-content/uploads/2014/10/Sam-Smith-promo-photo-profile-view-600x450.jpg'}}/>
         <TouchableOpacity
         onPress={() => this.jumpBack()}
         underlayColor='transparent'
         ><Image style={{position: 'absolute', top: 10, left: 15, width: 50, height: 25,
-        opacity: .5, backgroundColor: 'transparent'}} source={{uri: 'http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-1f2d1d01-9356-4583-853c-a9bf4e6d9ea5-backbtnw.png'}} />
+        opacity: .1, backgroundColor: 'transparent'}} source={{uri: 'http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-1f2d1d01-9356-4583-853c-a9bf4e6d9ea5-backbtnw.png'}} />
         </TouchableOpacity>
         <View style={styles.text3}>
         <Text style={{
         alignText: 'center',
         color: '#fff',
         fontWeight: 'bold',
-        fontSize: 18}}>Drake</Text>
+        fontSize: 18}}>Sam Smith</Text>
         </View>
         <View style={styles.text4}>
         <Text style={{
         alignText: 'center',
         color: '#fff',
         fontWeight: 'bold',
-        fontSize: 14}}>JUNGLE Tour</Text></View>
+        fontSize: 14}}>In The Lonely Hour Tour</Text></View>
         <TouchableHighlight style={{position: 'absolute', top:260, left:30, width: 125, backgroundColor: '#3effff',
          borderColor:'#3effff', borderWidth: 1, borderRadius: 4, underlayColor:'transparent'}}>
         <Text style={{padding: 5, color:'#000', fontWeight: 'bold', fontSize: 11, alignText: 'center'}}>+ Add to Favorites</Text>
@@ -126,10 +126,10 @@ var {
         <View style={{marginBottom: 250}}>
           <Text style={{paddingTop: 10, marginLeft:30, fontSize:18, fontWeight:'bold', color: '#3effff'}}>The Show</Text>
           <Text style={{paddingTop: 15, paddingRight: 40, paddingLeft: 40, fontSize:12, color: '#fff'}}>
-          Fresh off his headlining performance at <Text style={{fontWeight: 'bold'}}>Coachella</Text>, <Text style={{fontWeight: 'bold'}}>Drake</Text> has announced a string of US dates.
-           <Text style={{fontWeight: 'bold'}}>The Jungle Tour</Text> kicks off May 24th in Houston and includes shows in Detroit, Chicago, Montreal,
-            and Toronto before concluding June 5th with a gig at New York’s <Text style={{fontWeight: 'bold'}}>Governors Ball Music Festival</Text>.
-             He’ll be accompanied on the road by <Text style={{fontWeight: 'bold'}}>Future</Text>.
+          The In the Lonely Hour Tour is the first concert tour by English recording artist Sam Smith, in support of
+           his debut album In the Lonely Hour. The tour was announced in October 2014, with North American, European,
+            Asian, and Oceania dates revealed. It began on 9 January 2015 in Atlanta, Georgia and is scheduled to
+            conclude on the 12th of December in Brisbane, Australia.
           </Text>
           <View style={{position:'absolute', top: 385, marginLeft:140 }}>
           <Text style={{color:'#333', fontWeight: 'bold', fontSize: 10}}>(click box to play or pause)</Text>
@@ -137,7 +137,7 @@ var {
         </View>
 
             <TouchableOpacity style={styles.outerfullScreen} onPress={() => {this.setState({paused: !this.state.paused})}}>
-              <Video source={{uri: "http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-8f2bbe1e-ea6f-4c10-8a72-a948b7dfdacb-jungle.mp4"}}
+              <Video source={{uri: "http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-f9ca2334-80db-4819-b3b7-d53f04b9e2bd-lonelyhour.MP4"}}
                      style={styles.fullScreen}
                      rate={this.state.rate}
                      paused={!this.state.paused}
@@ -282,7 +282,7 @@ var {
       top: 230,
       left: 30,
       color: '#fff',
-      width: 125
+      width: 170
     },
     text5: {
       position: 'absolute',
@@ -302,7 +302,7 @@ var {
       height: 200,
       top: 85,
       borderWidth: 1,
-      borderColor: '#333',
+      borderColor: '#3effff',
       marginLeft:28
     },
     outerfullScreen: {
@@ -367,4 +367,4 @@ var {
 
 
 
-module.exports = Drake;
+module.exports = SamSmith;

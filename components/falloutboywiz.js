@@ -17,7 +17,7 @@ var {
     } = React;
 
 
-    var Drake = React.createClass({
+    var FallOutBoyWiz = React.createClass({
       jumpBack: function() {
         this.props.navigator.jumpBack();
       },
@@ -94,28 +94,28 @@ var {
 
         <View style={{borderWidth: 1, borderTopColor: '#222'}}>
         <Image style={{width: width, height: 300, backgroundColor: '#000'}}
-        source={{uri: 'http://cdn.stupiddope.com/wp-content/uploads/2015/05/drake-drops-a-new-freestyle-at-jungle-tours-stop-in-detroit-0-1024x682.jpg'}}>
+        source={{uri: 'http://www.utahsvfx.com/wp-content/uploads/2015/08/Boys-of-Zummer-1080x675.jpg'}}>
         <Image style={{ position: 'absolute', top: 80, left: 30, width: 125, height: 125, borderWidth: 1, borderColor: '#ccc'}}
-        source={{uri: 'http://2.bp.blogspot.com/-hqrTXfOKvgE/VSt0GeF_wHI/AAAAAAAAAaU/qYxw7dDH0bY/s1600/JUNGLE%2BPOSTERS%2BDATE%2BCHANGE-01.png'}}/>
+        source={{uri: 'http://content.tn-static.com/images/blog/TN_Boys_of_Zummer_300x300.jpg'}}/>
         <TouchableOpacity
         onPress={() => this.jumpBack()}
         underlayColor='transparent'
         ><Image style={{position: 'absolute', top: 10, left: 15, width: 50, height: 25,
-        opacity: .5, backgroundColor: 'transparent'}} source={{uri: 'http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-1f2d1d01-9356-4583-853c-a9bf4e6d9ea5-backbtnw.png'}} />
+        opacity: .9, backgroundColor: 'transparent'}} source={{uri: 'http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-1f2d1d01-9356-4583-853c-a9bf4e6d9ea5-backbtnw.png'}} />
         </TouchableOpacity>
         <View style={styles.text3}>
         <Text style={{
         alignText: 'center',
-        color: '#fff',
+        color: '#000',
         fontWeight: 'bold',
-        fontSize: 18}}>Drake</Text>
+        fontSize: 18, backgroundColor: '#fff'}}>Fall Out Boy x Wiz Khalifa</Text>
         </View>
         <View style={styles.text4}>
         <Text style={{
         alignText: 'center',
-        color: '#fff',
+        color: '#000',
         fontWeight: 'bold',
-        fontSize: 14}}>JUNGLE Tour</Text></View>
+        fontSize: 14, backgroundColor: '#fff'}}>The Boys of Zummer Tour</Text></View>
         <TouchableHighlight style={{position: 'absolute', top:260, left:30, width: 125, backgroundColor: '#3effff',
          borderColor:'#3effff', borderWidth: 1, borderRadius: 4, underlayColor:'transparent'}}>
         <Text style={{padding: 5, color:'#000', fontWeight: 'bold', fontSize: 11, alignText: 'center'}}>+ Add to Favorites</Text>
@@ -123,21 +123,22 @@ var {
         </Image>
         </View>
         <View style={{flex: 1, backgroundColor: '#141414', width: width, height: height}}>
-        <View style={{marginBottom: 250}}>
+        <View style={{marginBottom: 230}}>
           <Text style={{paddingTop: 10, marginLeft:30, fontSize:18, fontWeight:'bold', color: '#3effff'}}>The Show</Text>
           <Text style={{paddingTop: 15, paddingRight: 40, paddingLeft: 40, fontSize:12, color: '#fff'}}>
-          Fresh off his headlining performance at <Text style={{fontWeight: 'bold'}}>Coachella</Text>, <Text style={{fontWeight: 'bold'}}>Drake</Text> has announced a string of US dates.
-           <Text style={{fontWeight: 'bold'}}>The Jungle Tour</Text> kicks off May 24th in Houston and includes shows in Detroit, Chicago, Montreal,
-            and Toronto before concluding June 5th with a gig at New York’s <Text style={{fontWeight: 'bold'}}>Governors Ball Music Festival</Text>.
-             He’ll be accompanied on the road by <Text style={{fontWeight: 'bold'}}>Future</Text>.
+          The American Beauty/American Psycho Tour is the current concert tour by American rock band Fall
+           Out Boy. Supporting the band's sixth studio album American Beauty/American Psycho (2015),
+           the tour will visit North America and Europe until fall 2015. The North American leg was co-headlined
+            with American rapper Wiz Khalifa under the name The Boys of Zummer. In October 2015, the band announced
+             a second headlining US tour with support acts Awolnation and PVRIS.
           </Text>
-          <View style={{position:'absolute', top: 385, marginLeft:140 }}>
+          <View style={{position:'absolute', top: 395, marginLeft:140 }}>
           <Text style={{color:'#333', fontWeight: 'bold', fontSize: 10}}>(click box to play or pause)</Text>
           </View>
         </View>
 
             <TouchableOpacity style={styles.outerfullScreen} onPress={() => {this.setState({paused: !this.state.paused})}}>
-              <Video source={{uri: "http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-8f2bbe1e-ea6f-4c10-8a72-a948b7dfdacb-jungle.mp4"}}
+              <Video source={{uri: "http://files.parsetfss.com/08cff63e-1bd2-416f-9e60-7421877d5185/tfss-2d3ac9dd-3d8c-42a6-afed-d2344d274c08-zummer.mp4"}}
                      style={styles.fullScreen}
                      rate={this.state.rate}
                      paused={!this.state.paused}
@@ -274,7 +275,7 @@ var {
       top: 210,
       left: 30,
       color: '#fff',
-      width: 150
+      width: 220
     },
     text4: {
       position: 'absolute',
@@ -282,7 +283,7 @@ var {
       top: 230,
       left: 30,
       color: '#fff',
-      width: 125
+      width: 180
     },
     text5: {
       position: 'absolute',
@@ -300,14 +301,14 @@ var {
       position: 'absolute',
       width: 300,
       height: 200,
-      top: 85,
+      top: 95,
       borderWidth: 1,
-      borderColor: '#333',
+      borderColor: '#3effff',
       marginLeft:28
     },
     outerfullScreen: {
       position: 'absolute',
-      top: 85,
+      top: 95,
       marginLeft:28
     },
     controls: {
@@ -367,4 +368,4 @@ var {
 
 
 
-module.exports = Drake;
+module.exports = FallOutBoyWiz;

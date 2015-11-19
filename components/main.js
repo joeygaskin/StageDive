@@ -4,7 +4,7 @@ var React = require('react-native');
 var Carousel = require('react-native-looped-carousel');
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
-var OneDirection = require('./onedirection');
+
 
 var VideoPlayer = require('./videoplayer')
 var Video = require('react-native-video');
@@ -15,6 +15,9 @@ var CustomTabBar = require('./customtabbar');
 var VIP = require('./vip');
 var { Icon, } = require('react-native-icons');
 var Home = require('./home');
+var Coldplay = require('./coldplay');
+var FallOutBoyWiz = require('./falloutboywiz');
+var SamSmith = require('./samsmith');
 
 var {
     StyleSheet,
@@ -49,7 +52,7 @@ var {
                  tabLabel="StageDive"/>
 
                <VIP tabLabel="VIP Access"/>
-
+    
         </ScrollableTabView>
       );
     }
